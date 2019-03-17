@@ -12,20 +12,20 @@ body {
   background-color: rgba(25, 25, 120, 0.9);
 }
 
-.site-title-sub {
-  margin: 0 0 30px;
-  letter-spacing: 1px;
-  font-size: 1.2rem;
-}
-
-.site-title {
-  margin: 50px;
-  font-size: 4.5rem;
-}
-
-.site-description {
-  margin-bottom: 50px;
-  color: #888
+.site {
+  &-title {
+    margin: 50px;
+    font-size: 4.5rem;
+    &-sub {
+      margin: 0 0 30px;
+      letter-spacing: 1px;
+      font-size: 1.2rem;
+    }
+  }
+  &-description {
+    margin-bottom: 50px;
+    color: #888
+  }
 }
 
 .button {
@@ -39,14 +39,16 @@ body {
   text-decoration: none;
   letter-spacing: 1px;
   font-size: 0.7rem;
-}
-
-.button:hover {
-  opacity: 0.9;
-}
-
-.button-orange{
-  background-color: #f1b400;
+  &:hover {
+    opacity: 0.9;
+  }
+  &-orange{
+    background-color: #f1b400;
+  }
+  &-ghost {
+    border: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
 }
 
 .about {
@@ -54,13 +56,12 @@ body {
   padding: 80px 30px;
   background-color: #ffffff;
   color: #333;
-}
-
-.about-text {
-  width: 600px;
-  margin: 30px auto;
-  line-height: 2.5;
-  text-align: left
+  &-text {
+    width: 600px;
+    margin: 30px auto;
+    line-height: 2.5;
+    text-align: left
+  }
 }
 
 .heading {
@@ -77,58 +78,50 @@ body {
   height: 100vh;
   background-color: #383634;
   padding: 80px 0 10px;
+  &-wrapper {
+    display: table;
+    width: 860px;
+    margin: 60px auto 0;
+    table-layout: fixed;
+  }
 }
 
-.works-wrapper {
-  display: table;
-  width: 860px;
-  margin: 60px auto 0;
-  table-layout: fixed;
-}
-
-.work-box {
-  position: relative;
-  display: table-cell;
-  background-color: rgba(100, 100, 100, 0.3);
-  border: 1px solid #333;
-}
-
-.work-image {
-  display: block;
-  width: 100%;
-}
-
-.work-description {
-  margin: 20px 0;
-}
-
-.work-text {
-  margin: 10px auto 10px;
-  font-size: 1.2rem;
-  line-height: 2;
-}
-
-.work-description .button {
-  width: 60%;
-  margin-top: 20px;
-  padding: 3px;
-}
-
-.button-ghost {
-  border: 2px solid #fff;
-  background-color: rgba(255, 255, 255, 0.15);
+.work {
+  &-box {
+    position: relative;
+    display: table-cell;
+    background-color: rgba(100, 100, 100, 0.3);
+    border: 1px solid #333;
+  }
+  &-image {
+    display: block;
+    width: 100%;
+  }
+  &-description {
+    margin: 20px 0;
+  }
+  &-text {
+    margin: 10px auto 10px;
+    font-size: 1.2rem;
+    line-height: 2;
+  }
+  &-description .button {
+    width: 60%;
+    margin-top: 20px;
+    padding: 3px;
+  }
 }
 
 .contact {
   height: 100vh;
   padding: 80px 0 150px;
   background-color: rgba(25, 25, 120, 0.9);
+  &-form {
+    width: 50%;
+    margin: 50px auto 0 ;
+  }
 }
 
-.contact-form {
-  width: 50%;
-  margin: 50px auto 0 ;
-}
 
 .contact-form input[type=text], .contact-form textarea {
   display: block;
