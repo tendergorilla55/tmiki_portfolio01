@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root 'portfolios#index'
+  root 'portfolio#index'
   resources :portfolio, only: [:index]
 end

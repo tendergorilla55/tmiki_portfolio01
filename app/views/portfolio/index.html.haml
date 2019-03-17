@@ -1,0 +1,31 @@
+%header.header
+  %p.site-title-sub -----Web application portfolio-----
+  %h1.site-title MY WORKS
+  %p.site-description Check out some of my works.
+  .buttons
+    .button Learn MORE
+    .button.button-orange SEND MESSAGE
+%section.about
+  %h2.heading PROFILE
+  %p.about-text
+    子どもの頃からモノづくりが好きで、いまはウェブアプリをつくることにハマっています。
+    Railsは難しくて最初は使えるようになるのかな？と不安に感じましたが、いまは本当に便利なフレームワークだなと思っています。
+    これから、共通の趣味を持った仲間がコミュニケーションを取れるようなオリジナルアプリをつくっていきます。来月リリース予定なので、興味のある方はぜひお試しください！
+%section.works
+  %h2.heading MY WORKS
+  .works-wrapper
+    .work-box
+      = image_tag 'mercari_top.png', class: 'work-image'
+      .work-description
+        Mercariコピーサイト
+        .button.button-ghost READ MORE
+    .work-box
+      = image_tag 'mercari_top.png', class: 'work-image'
+      .work-description
+        Mercariコピーサイト
+        .button.button-ghost READ MORE
+%section.contact
+  .contact-form
+    %input{type: 'text', placeholder: 'NAME'}
+    %textarea{placeholder: 'MESSAGE'}
+    %input{type: 'submit'}
