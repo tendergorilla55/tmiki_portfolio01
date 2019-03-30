@@ -1,16 +1,18 @@
 %header.header
   %p.site-title-sub -----Web application portfolio-----
-  %h1.site-title MY WORKS
+  %h1.site-title Yasagori WORKS
   %p.site-description Check out some of my works.
   .buttons
-    .button Learn MORE
-    .button.button-orange SEND MESSAGE
+    #button_about.button PROFILE
+    #button_work.button.button-orange WORKS
 %section.about
   %h2.heading PROFILE
-  %p.about-text
-    子どもの頃からモノづくりが好きで、いまはウェブアプリをつくることにハマっています。
-    Railsは難しくて最初は使えるようになるのかな？と不安に感じましたが、いまは本当に便利なフレームワークだなと思っています。
-    これから、共通の趣味を持った仲間がコミュニケーションを取れるようなオリジナルアプリをつくっていきます。来月リリース予定なので、興味のある方はぜひお試しください！
+  .profile
+    = image_tag 'yasagori.jpg'
+    %p.about-text
+      子どもの頃からモノづくりが好きで、いまはウェブアプリをつくることにハマっています。
+      Railsは難しくて最初は使えるようになるのかな？と不安に感じましたが、いまは本当に便利なフレームワークだなと思っています。
+      これから、共通の趣味を持った仲間がコミュニケーションを取れるようなオリジナルアプリをつくっていきます。来月リリース予定なので、興味のある方はぜひお試しください！
 %section.works
   %h2.heading MY WORKS
   .works-wrapper
@@ -29,3 +31,5 @@
     %input{type: 'text', placeholder: 'NAME'}
     %textarea{placeholder: 'MESSAGE'}
     %input{type: 'submit'}
+#top_button.top-button
+  = fa_icon 'angle-double-up', class: 'icon_up'

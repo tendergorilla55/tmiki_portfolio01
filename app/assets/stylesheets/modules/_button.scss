@@ -1,0 +1,42 @@
+.button {
+  display: inline-block;
+  width: 200px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 4px;
+  background-color: #afa58d;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+  &:hover {
+    opacity: 0.9;
+  }
+  &-orange{
+    background-color: #f1b400;
+  }
+  &-ghost {
+    border: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
+.top-button {
+  bottom: 32px;
+  right: 32px;
+  width: 60px;
+  height: 60px;
+  font-size: 15px;
+  position: fixed;
+  border-radius: 50%;
+  background-color: #00008B;
+  text-align: center;
+  line-height: 80px;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.icon_up {
+  font-size: 45px;
+}
