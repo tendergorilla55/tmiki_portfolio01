@@ -1,16 +1,18 @@
 %header.header
   %p.site-title-sub -----Web application portfolio-----
-  %h1.site-title MY WORKS
+  %h1.site-title Yasagori WORKS
   %p.site-description Check out some of my works.
   .buttons
-    .button Learn MORE
-    .button.button-orange SEND MESSAGE
+    #button_about.button PROFILE
+    #button_work.button.button-orange WORKS
 %section.about
   %h2.heading PROFILE
-  %p.about-text
-    子どもの頃からモノづくりが好きで、いまはウェブアプリをつくることにハマっています。
-    Railsは難しくて最初は使えるようになるのかな？と不安に感じましたが、いまは本当に便利なフレームワークだなと思っています。
-    これから、共通の趣味を持った仲間がコミュニケーションを取れるようなオリジナルアプリをつくっていきます。来月リリース予定なので、興味のある方はぜひお試しください！
+  .profile
+    = image_tag 'yasagori.jpg'
+    %p.about-text
+      学生の頃から乗り物が好きで、車バイクを乗ったり弄ったり。社会人になってからも、モノづくりの会社で図面を書く仕事をしていました。そしていまはウェブアプリをつくることにハマっています。
+      Railsは難しくて最初は使えるようになるのかな？と不安に感じましたが、いまは本当に便利なフレームワークだなと思っています。
+      これから、共通の趣味を持った仲間がコミュニケーションを取れるようなオリジナルアプリをつくっていきます！
 %section.works
   %h2.heading MY WORKS
   .works-wrapper
@@ -18,14 +20,27 @@
       = image_tag 'mercari_top.png', class: 'work-image'
       .work-description
         %p Mercariコピーサイト
-        .button.button-ghost READ MORE
+        = link_to "https://github.com/tendergorilla55/freemarket_sample_37e", class: "button button-ghost", target: "_blank" do
+          = fa_icon 'github'
+          %p GitHub
     .work-box
-      = image_tag 'mercari_top.png', class: 'work-image'
+      = link_to image_tag('chatspace.png', class: 'work-image'), "http://18.182.149.255/", target: "_blank"
       .work-description
-        %p Mercariコピーサイト
-        .button.button-ghost READ MORE
+        %p チャットアプリ
+        = link_to "https://github.com/tendergorilla55/chat-space", class: "button button-ghost", target: "_blank" do
+          = fa_icon 'github'
+          %p GitHub
+    .work-box
+      = link_to image_tag('chartpage.png', class: 'work-image'), "https://challenge3-miki.herokuapp.com/", target: "_blank"
+      .work-description
+        %p 家庭ごとの情報表示アプリ
+        = link_to "https://github.com/tendergorilla55/EnergyDataSimulationChallenge/tree/master/challenge3/webapp/t_miki", target: "_blank", class: "button button-ghost" do
+          = fa_icon 'github'
+          %p GitHub
 %section.contact
   .contact-form
     %input{type: 'text', placeholder: 'NAME'}
     %textarea{placeholder: 'MESSAGE'}
     %input{type: 'submit'}
+#top_button.top-button
+  = fa_icon 'angle-double-up', class: 'icon_up'
