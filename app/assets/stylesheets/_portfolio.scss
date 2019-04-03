@@ -81,10 +81,14 @@ body {
     display: table-cell;
     background-color: rgba(100, 100, 100, 0.3);
     border: 1px solid #333;
+    padding: 2px;
   }
   &-image {
     display: block;
     width: 100%;
+    &:hover {
+      opacity: 0.8;
+    }
   }
   &-description {
     margin: 20px 0;

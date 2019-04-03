@@ -18,6 +18,17 @@
   &-ghost {
     border: 2px solid #fff;
     background-color: rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    & i {
+      font-size: 16px;
+      padding-right: 2px;
+    }
+    & p {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 }
 
